@@ -1,16 +1,19 @@
-export const App = () => {
+import { Profile } from './profile/Profile.jsx'
+import '../index.css'
+import userInfo from '../assets/user.json'
+import { Statistics } from './Statistics/Statistics.jsx'
+import dataStats from '../assets/data.json'
+import { FriendList } from './FriendList/FriendList.jsx'
+import friendItem from '../assets/friends.json'
+
+function App(){
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+      <Profile user={userInfo} />
+      <Statistics data={dataStats} />
+      <FriendList friends={friendItem} />
     </div>
-  );
-};
+  )
+}
+
+export default App
