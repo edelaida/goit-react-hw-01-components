@@ -1,0 +1,16 @@
+.transactionhistory {
+    padding-top: 20px;
+    margin: 0 auto;        
+}
+.title {
+  background-color: rgb(152, 152, 236);
+}
+.titlename {
+    font-size: 20px;
+    padding: 10px 50px;
+    color: aliceblue;
+}
+.itemname {
+   text-align: center;
+
+}

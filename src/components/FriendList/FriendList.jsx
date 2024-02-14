@@ -1,16 +1,28 @@
+import s from './FriendList.module.css';
 
 export const FriendList = ({ friends }) => {
-    return (
-        <ul class="friend-list">
-            {friends.map((item, idx) => (
-             <li class="item" key={item.id}>
-                    <span class="status">{item.isOnline}</span>
-                <img class="avatar" src= {item.avatar} alt="User avatar" width="48" />
-                    <p class="name">{item.name }</p>
-            </li> 
-          ))}   
-     </ul>
-    )
-}
-
- 
+  const isOnline = true;
+  return (
+    <ul className={s.friendlist}>
+      {friends.map((item, idx) => (
+        <li className={s.item} key={item.id}>
+          <span
+            className={s.status}
+            style={
+              item.isOnline
+                ? { backgroundColor: 'green' }
+                : { backgroundColor: 'red' }
+            }
+          ></span>
+          <img
+            className={s.avatar}
+            src={item.avatar}
+            alt="User avatar"
+            width="48"
+          />
+          <p className={s.name}>{item.name}</p>
+        </li>
+      ))}
+    </ul>
+  );
+};
