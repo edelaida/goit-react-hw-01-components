@@ -1,7 +1,6 @@
 import s from './FriendList.module.css';
 
 export const FriendList = ({ friends }) => {
-  const isOnline = true;
   return (
     <ul className={s.friendlist}>
       {friends.map((item, idx) => (
