@@ -1,5 +1,6 @@
 import s from './Statistics.module.css';
-export const Statistics = ({ data, title = 'Upload stats' }) => {
+
+export const Statistics = ({ data, title }) => {
   const isOpen = false;
   const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
 
