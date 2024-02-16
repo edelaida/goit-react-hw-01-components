@@ -1,13 +1,12 @@
 import s from './Statistics.module.css';
 
 export const Statistics = ({ data, title }) => {
-  const isOpen = false;
   function getRandomColor() {
     return '#' + Math.floor(Math.random() * 16777215).toString(16);
   }
   return (
     <section class="statistics">
-      {isOpen && <h2 class="title">{title}</h2>}
+      {title && <h2 className={s.title}>{title}</h2>}
       <ul className={s.statlist}>
         {data.map((item, idx) => (
           <li
